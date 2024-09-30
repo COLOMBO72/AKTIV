@@ -367,6 +367,31 @@ body {
   }
 } */
 
+/*ABOUT US PAGE*/
+
+.info_about_company{
+  background-color: var(--dark-bg);
+  background-image: url('./img/about_company.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.info_about_company p{
+  background-color: #292929d8;
+  color: rgba(255, 255, 255, 0.623);
+  padding: 20px;
+}
+
+/*CONTACTS PAGE*/
+
+
+
+/* ADAPTATION FOR LITTLE SIZES*/
 
 @media (max-width: 530px) {
   .nav {
@@ -415,5 +440,18 @@ body {
 
   .copyright {
     font-size: 14px;
+  }
+  .info_about_company{
+    background-color: var(--dark-bg);
+    background-image: url('./img/about_company.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    padding: 5px;
+  }
+  .info_about_company p{
+    background-color: #292929d8;
+    color: rgba(255, 255, 255, 0.623);
+    padding: 4px;
   }
 }

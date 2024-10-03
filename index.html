@@ -15,9 +15,12 @@
       <img src="./img/poppup_img.png" alt="poppup_img" class="poppup_img">
       <div class="poppup__text">
         <h1>Введите свои данные:</h1>
-        <input type="text" placeholder="Имя" maxlength="20">
-        <input id="inputPhone" value="+7(___)___-__-__" >
-        <button>Связаться</button>
+        <form action="https://formspree.io/f/mgvwgjgv" method="POST">
+          <input name="Имя" id="firstName" type="name" placeholder="Имя" maxlength="20">
+          <input name="Телефон" id="inputPhone" value="+7(___)___-__-__">
+          <!-- your other form fields go here -->
+          <button onclick="ShowMsg()" type="submit">Связаться</button>
+        </form>
       </div>
     </div>
   </div>
@@ -92,19 +95,28 @@
         <li class="infobots">
           <div class="info__bot info__bot--active">
             <h1>Что такое чат-боты?</h1>
-            <p>Это компьютерная программа, которая интерактивно имитирует человеческую речь (устную или письменную) и позволяет общаться с цифровыми устройствами так, как если бы они были живыми людьми. <br/> В основе чат-ботов лежит ИИ, автоматические правила, обработка естественного языка (NLP) и машинное обучение (ML), обрабатывают данные и дают ответы на любые виды запросов.</p>
+            <p>Это компьютерная программа, которая интерактивно имитирует человеческую речь (устную или письменную) и
+              позволяет общаться с цифровыми устройствами так, как если бы они были живыми людьми. <br /> В основе
+              чат-ботов лежит ИИ, автоматические правила, обработка естественного языка (NLP) и машинное обучение (ML),
+              обрабатывают данные и дают ответы на любые виды запросов.</p>
           </div>
           <div class="info__bot info__bot--active">
             <h1>Что могут чат-боты?</h1>
-            <p>Они могут быть очень простыми, как элементарные программы, отвечающие на простой запрос однострочным ответом, или сложными, как цифровые помощники, которые обучаются и развиваются по мере сбора и обработки информации, тем самым повышая свой уровень персонализации</p>
+            <p>Они могут быть очень простыми, как элементарные программы, отвечающие на простой запрос однострочным
+              ответом, или сложными, как цифровые помощники, которые обучаются и развиваются по мере сбора и обработки
+              информации, тем самым повышая свой уровень персонализации</p>
           </div>
           <div class="info__bot info__bot--active">
             <h1>Для чего нужны чат-боты?</h1>
-            <p>Чат-боты повышают операционную эффективность и обеспечивают экономию для компаний, а для их заказчиков и сотрудников предлагают дополнительные услуги и повышают удобство. С их помощью компаниям становится проще реагировать на самые разные запросы заказчиков и решать их проблемы. Соответственно, уменьшается необходимость в операторах.</p>
+            <p>Чат-боты повышают операционную эффективность и обеспечивают экономию для компаний, а для их заказчиков и
+              сотрудников предлагают дополнительные услуги и повышают удобство. С их помощью компаниям становится проще
+              реагировать на самые разные запросы заказчиков и решать их проблемы. Соответственно, уменьшается
+              необходимость в операторах.</p>
           </div>
           <div class="info__bot info__bot--active">
             <h1>Как получить их себе в бизнес?</h1>
-            <p>Всё просто! Нажмите на кнопку "получить консультацию" и вам расскажут инструкции и подберут нужного чат бота!</p>
+            <p>Всё просто! Нажмите на кнопку "получить консультацию" и вам расскажут инструкции и подберут нужного чат
+              бота!</p>
           </div>
         </li>
       </ul>
@@ -128,35 +140,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    let inputPhone=document.getElementById("inputPhone");
-    inputPhone.oninput=()=>phoneMask(inputPhone)
-    function phoneMask(inputEl) {
-        let patStringArr = "+7(___)___-__-__".split('');
-        let arrPush = [3, 4, 5, 7, 8, 9, 11, 12, 14, 15]
-        let val = inputEl.value;
-        let arr = val.replace(/\D+/g, "").split('').splice(1);
-        let n;
-        let ni;
-        arr.forEach((s, i) => {
-            n = arrPush[i];
-            patStringArr[n] = s
-            ni = i
-        });
-        arr.length < 10 ? inputEl.style.color = 'red' : inputEl.style.color = 'green';
-        inputEl.value = patStringArr.join('');
-        n ? inputEl.setSelectionRange(n + 1, n + 1) : inputEl.setSelectionRange(17, 17)
-    }
-    let openPop = document.querySelector("open_poppup")
-    let Pop = document.querySelector(".poppup")
-    let closePop = document.querySelector("close_poppup")
-    
-    const OpenPoppup= () =>{
-      Pop.classList.toggle('poppup--active');
-    }
-    const ClosePoppup = () => {
-      Pop.classList.toggle('poppup--active');
-    }
-</script>
+  <script src="PoppupFuncs.js"></script>
 </body>
+
 </html>

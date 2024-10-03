@@ -86,14 +86,21 @@ body {
 
 .poppup__text {
   margin-top: 20px;
-  background-color: rgb(37, 37, 37);
   padding: 15px;
   border-radius: 15px;
-  color: var(--header-text);
+  color: var(--dark-black);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    input{
+      margin: 15px 0;
+    }
+  }
 }
 
 .container {
@@ -389,7 +396,16 @@ body {
 
 /*CONTACTS PAGE*/
 
-
+.contacts__wrapper{
+  color: var(--header-text);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.contacts__wrapper span{
+  margin: 10px 0;
+  font-size: 24px;
+}
 
 /* ADAPTATION FOR LITTLE SIZES*/
 

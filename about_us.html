@@ -10,12 +10,29 @@
 
 <body>
 
+  <div class="poppup">
+    <div class="poppup__window">
+      <img src="./img/icons/close.png" alt="" onclick="ClosePoppup()" class="close_img" name="close_poppup">
+      <img src="./img/poppup_img.png" alt="poppup_img" class="poppup_img">
+      <div class="poppup__text">
+        <h1>Введите свои данные:</h1>
+        <form action="https://formspree.io/f/mgvwgjgv" method="POST">
+          <input name="Имя" id="firstName" type="name" placeholder="Имя" maxlength="20">
+          <input name="Телефон" id="inputPhone" value="+7(___)___-__-__">
+          <!-- your other form fields go here -->
+          <button onclick="ShowMsg()" type="submit">Связаться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav">
     <div class="container">
       <div class="nav-row">
         <a href="./index.html" class="logo"><strong>АКТИВ</strong></a>
         <ul class="nav-list">
-          <li class="nav-list__item"><a href="./about_us.html" class="nav-list__link nav-list__link--active">О компании</a></li>
+          <li class="nav-list__item"><a href="./about_us.html" class="nav-list__link nav-list__link--active">О
+              компании</a></li>
           <li class=" nav-list__item"><a href="./contacts.html" class="nav-list__link">Контакты</a></li>
         </ul>
         <ul class="nav-list">
@@ -31,19 +48,16 @@
 
   <main class="section">
     <div class="container">
-      <h2 class="title-1">АКТИВ</h2>
-      <div class="info_about_company">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ex obcaecati facere numquam unde modi repellat mollitia minima dolor quam sunt, molestias fugit placeat repellendus eos. Consequuntur veniam eos repellat!</p>
+      <div class="about_us--wrapper">
+        <h2 class="title-1">АКТИВ</h2>
+        <div class="info_about_company">
+          <p>Если для Вашего бизнеса важен каждый клиент, если Вы следите за удобством использования Ваших услуг, если
+            Вы стремитесь оказывать максимально качественный сервис, у нас есть то, что поможет Вам в достижении этих
+            целей - готовые чат-боты.
+            <br />Наша команда разрабатывает готовые решения для того, чтобы ваш бизнес развивался и автоматизировался.
+          </p>
+          <a href="#" class="btn" onclick="OpenPoppup()" name="open_poppup">Получить консультацию</a>
+        </div>
       </div>
     </div>
   </main>
@@ -65,6 +79,7 @@
       </div>
     </div>
   </footer>
+  <script src="PoppupFuncs.js"></script>
 </body>
 
 </html>
